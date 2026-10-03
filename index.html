@@ -774,6 +774,36 @@ button,.btn,.nav-btn,.map-record-row,.directory-list button{touch-action:manipul
   }
 }
 
+
+/* PORTRAIT COMPOSITION FIX */
+@media (orientation:portrait) and (max-width:1100px){
+.banner{font-size:clamp(25px,5.6vw,44px)!important;line-height:.98!important;min-width:0!important;white-space:nowrap!important;overflow:hidden!important}
+.data-grid{width:100%!important;min-width:0!important;max-width:100%!important;grid-template-columns:repeat(8,minmax(0,1fr))!important;column-gap:clamp(2px,.55vw,7px)!important;row-gap:clamp(1px,.35vw,5px)!important;padding-left:0!important;padding-right:0!important;overflow:hidden!important}
+.data-grid span{min-width:0!important;width:auto!important;max-width:100%!important;font-size:clamp(8px,1.45vw,14px)!important;line-height:1.05!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:clip!important}
+.map-controls{width:100%!important;min-width:0!important;display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:clamp(3px,.7vw,7px)!important;align-items:stretch!important}
+.map-controls button,.map-controls .btn{box-sizing:border-box!important;width:100%!important;min-width:0!important;max-width:none!important;min-height:clamp(42px,6.5vw,54px)!important;height:auto!important;padding:5px 2px!important;margin:0!important;font-size:clamp(9px,1.7vw,16px)!important;line-height:1!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:clip!important;word-break:normal!important;overflow-wrap:normal!important}
+#map-screen .map-layout,#map-screen.regional-map-active .map-layout{display:grid!important;grid-template-columns:minmax(0,1fr)!important;grid-template-rows:minmax(220px,40fr) minmax(300px,60fr)!important;height:clamp(600px,76dvh,920px)!important;gap:8px!important;align-items:stretch!important;overflow:visible!important}
+#map-screen .map-stage{width:100%!important;height:100%!important;min-height:0!important;max-height:none!important;aspect-ratio:auto!important;overflow:hidden!important}
+#map-screen .map-stage svg,#map-screen #mapSvg{width:100%!important;height:100%!important;display:block!important}
+#map-screen .map-detail{width:100%!important;height:100%!important;min-height:0!important;max-height:none!important;overflow-y:auto!important;overscroll-behavior:contain}
+#directory-screen .directory-layout{display:grid!important;grid-template-columns:minmax(0,1fr)!important;grid-template-rows:minmax(300px,44vh) auto!important;gap:10px!important;height:auto!important;overflow:visible!important}
+#directory-screen .directory-list-shell{min-height:300px!important;height:44vh!important;max-height:520px!important}
+#directory-screen .directory-list{height:100%!important;max-height:none!important;overflow-y:auto!important}
+#directory-screen .directory-profile{position:relative!important;min-height:0!important;height:auto!important;max-height:none!important;overflow:visible!important}
+#map-screen,#directory-screen{padding-bottom:calc(10px + var(--safe-bottom))!important;overflow:visible!important}
+#map-screen>.map-actions,#directory-screen>.directory-actions{position:static!important;inset:auto!important;transform:none!important;width:100%!important;max-width:none!important;margin:12px 0 calc(8px + var(--safe-bottom))!important;padding:0!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:clamp(5px,1vw,9px)!important;clear:both!important;z-index:auto!important}
+#map-screen>.map-actions .btn,#directory-screen>.directory-actions .btn{width:100%!important;min-width:0!important;max-width:none!important;min-height:50px!important;height:auto!important;flex:none!important;padding:6px 4px!important;font-size:clamp(11px,1.8vw,16px)!important;line-height:1!important;white-space:nowrap!important;overflow:hidden!important}
+}
+@media (orientation:portrait) and (max-width:600px){
+.banner{font-size:clamp(22px,7.2vw,34px)!important}
+.data-grid{column-gap:2px!important;row-gap:1px!important}
+.data-grid span{font-size:clamp(7px,2.15vw,11px)!important}
+.map-controls{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:3px!important}
+.map-controls button,.map-controls .btn{min-height:42px!important;font-size:clamp(8px,2.6vw,12px)!important;padding:4px 1px!important}
+#map-screen .map-layout,#map-screen.regional-map-active .map-layout{grid-template-rows:minmax(190px,40fr) minmax(285px,60fr)!important;height:clamp(540px,80dvh,760px)!important}
+#map-screen>.map-actions,#directory-screen>.directory-actions{grid-template-columns:1fr!important}
+}
+
 </style>
 </head>
 <body>
